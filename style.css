@@ -1,0 +1,36 @@
+#titre{
+    color: red;
+    font-weight: bold; 
+    text-align: center;
+}
+
+.fonctions{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+}
+
+#searchInput{
+    padding: 8px 12px; 
+    width: 300px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filtreCategorie{
+    padding: 8px 12px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#nbLivres{
+    border: 1px solid #999;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+}
