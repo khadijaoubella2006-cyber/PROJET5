@@ -1,36 +1,108 @@
-#titre{
-    color: red;
-    font-weight: bold; 
-    text-align: center;
+* { box-sizing: border-box; }
+body{
+  font-family: 'Fredoka', sans-serif;
+  background:  #f5cdd4 ;
+  
 }
+.top-header{
+  background: white;
+  border-radius: 18px;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+#titre{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e94e85 !important;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center !important;
+}
+.header-icons{ display:flex; gap:16px; font-size:22px; align-items:center; }
+.profile{ background:#d9c2ff; border-radius:50%; padding:6px 9px; }
+.sous-titre{ text-align:center; font-size:18px; margin-bottom:22px; color:#333; }
 
 .fonctions{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center; 
-    flex-wrap: wrap; 
-    margin-bottom: 20px;
+  
+  margin:0 auto 35px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  display: flex;
+  gap:25px ;
 }
-
+.search-wrapper{ position:relative; }
+.icon-search{ position:absolute; left:14px; top:11px; color:#888; }
 #searchInput{
-    padding: 8px 12px; 
-    width: 300px; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding:12px 16px 12px 42px !important;
+  width:380px !important;
+  border-radius:30px !important;
+  border:none !important;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  outline:none;
 }
-
 #filtreCategorie{
-    padding: 8px 12px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding:12px 18px !important;
+  width:230px !important;
+  border-radius:30px !important;
+  border:none !important;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  background:white;
+}
+#nbLivres{
+  background:#ffd6e0;
+  color:#d6336c;
+  border:2px solid #ffb5c8 !important;
+  border-radius:30px !important;
+  padding:10px 18px !important;
+  font-weight:600;
 }
 
-#nbLivres{
-    border: 1px solid #999;
-    padding: 8px 15px;
-    border-radius: 5px;
-    background: white;
-    text-align: center;
+#zonePrincipale{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap:22px;
+  max-width:1220px;
 }
+.livre{
+  background:white;
+  border-radius:18px;
+  padding:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.07);
+  transition:.2s;
+  display:flex;
+  flex-direction:column;
+}
+.livre:hover{ transform:translateY(-5px); }
+.badge-cat{
+  display:inline-block;
+  padding:3px 12px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:600;
+  width:fit-content;
+  margin-bottom:8px;
+}
+.badge-cat.Classique, .badge-cat.Roman-pink{ background:#ffd6e0; color:#d6336c; }
+.badge-cat.Roman{ background:#c6ddff; color:#2b5ea6; }
+.badge-cat.Science{ background:#ffdfba; color:#b65a1f; }
+.badge-cat.Science.pink{ background:#ffd6e0; color:#d6336c; }
+.badge-cat.Histoire{ background:#ffdfba; color:#b65a1f; }
+
+.cover{
+  width:100%; height:190px;
+  object-fit:cover; border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom:10px;
+}
+.livre h3{ font-size:16px; margin:6px 0 2px; font-weight:600; }
+.livre .auteur{ font-size:13px; color:#777; margin-bottom:14px; }
+.livre-footer{ display:flex; justify-content:space-between; align-items:center; margin-top:auto; }
+.prix{ font-weight:700; font-size:18px; }
+.prix.Classique, .prix.Roman-pink{ color:#e94e85; }
+.prix.Roman{ color:#3a6bc5; }
+.prix.Science, .prix.Histoire{ color:#e67e22; }
+.btn-cart{ border:none; padding:6px 14px; border-radius:10px; cursor:pointer; }
